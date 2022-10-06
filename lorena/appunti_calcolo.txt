@@ -1,0 +1,22 @@
+appunti laboratorio n2 - calcolo numerico 
+
+si possono definire dei vettori specificando la tipologia di dato, es:
+vett = int8([2:2:10]) (1 byte per ogni valore) (int16/int32/int64);
+ 
+-se non specifichiamo nulla matlab deduce che operazione fare dai suoi operandi-
+
+funzione find -> di default quando da in ritorno gli indici sono rispetto alla sintassi degenere, ovvero qualunque sia la dimensione dell'array della condizione logica (ritorna gli indici lineari, uso successivo della funzione ind2sub(dim, vettoreindici) 
+
+differenza switch case matlab vs switch case c -> in matlab i case sono mutualmente esclusivi = entrato in un case gli altri non si eseguono;
+
+in matlab nel ciclo for come variabile contatore si possono usare anche caratteri, script -> non per forza un intero (ok anche in c ma è meno comune);
+
+keyboard -> breakpoint persistenti a differenza di quello impostabile mediante editor;
+
+le mfunction devono essere contenute in un file il cui nome deve essere lo stesso della funzione ->senno' non la trova;
+
+dbup/dbdown per navigare nel workspace mediante debugger
+
+
+
+
