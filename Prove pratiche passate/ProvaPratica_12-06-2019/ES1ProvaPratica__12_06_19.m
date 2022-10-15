@@ -17,7 +17,7 @@ coeff = [-exp(1)^-pi, -1.4, 1, 0, -log(207.13), 0, 3*pi]; % p(x) = −e^−π*x^
 
 fprintf("Valore del polinomio in x0: %f \n", valore_polinomio)
 fprintf("Valore della derivata prima in x0: %f \n", derivata_prima)
-fprintf("Valore della derivata seconda in x0: %f \n", derivata_seconda)
+fprintf("Valore della derivata seconda in x0: %f \n", 2*derivata_seconda)
 
 X = linspace(0.8, 1.7);
 Y = -exp(1)^-pi*X.^6 -1.4*X.^5 + X.^4 - log(207.13)*X.^2 + 3*pi;

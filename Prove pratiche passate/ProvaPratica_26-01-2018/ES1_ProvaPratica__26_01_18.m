@@ -14,7 +14,7 @@ coeff = [3*(x-2)^2*(x+1), -1*(x+pi), 0, -2]; % p(x) = 3(x−2)^2*(x+1)*x^3 − (
 
 fprintf("Valore del polinomio in x0: %f \n", valore_polinomio)
 fprintf("Valore della derivata prima in x0: %f \n", derivata_prima)
-fprintf("Valore della derivata seconda in x0: %f \n", derivata_seconda)
+fprintf("Valore della derivata seconda in x0: %f \n", 2*derivata_seconda)
 
 
 

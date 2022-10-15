@@ -19,15 +19,14 @@ for i = 1:N
 end
 tempoCiclo = toc;
 
-z = zeros(N);
 tic
-    z = funzioneES2(x, alpha, beta);
+z = funzioneES2(x, alpha, beta);
 tempoVett = toc;
 
 fprintf("Il ciclo for ha impiegato: %f\n", tempoCiclo)
 fprintf("la sintassi vettoriale ha impiegato: %f\n", tempoVett)
-diffRel = tempoVett - tempoCiclo / tempoCiclo;
-diffPerc = diffRel * 100;
+diffRel = abs(tempoCiclo - tempoVett) / abs(tempoCiclo);
+diffPerc = abs(tempoVett) * 100 / abs(tempoCiclo);
 fprintf("La differenza relativa rispetto al tempo del ciclo: %f\n", diffRel)
-fprintf("La percentuale rispetto al tempo del ciclo: %f%%\n", diffPerc)
+fprintf("L'incidenza percentuale rispetto al tempo del ciclo: %f%%\n", diffPerc)
 plot(x,z)

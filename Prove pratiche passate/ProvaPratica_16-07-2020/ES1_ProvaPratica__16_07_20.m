@@ -20,7 +20,7 @@ plot(X,Y)
 
 fprintf("Valore del polinomio in x0: %f \n", valore_polinomio)
 fprintf("Valore della derivata prima in x0: %f \n", derivata_prima)
-fprintf("Valore della derivata seconda in x0: %f \n", derivata_seconda)
+fprintf("Valore della derivata seconda in x0: %f \n", 2*derivata_seconda)
 
 
 

@@ -12,15 +12,15 @@ s(1) = 5 ;
 w(1) = 1 ;
 
 [z1,indx1,tempo] = funzioneES2(x,s(1),w(1));
-fprintf("Tempo medio per 10000 valutazioni con s = %.3f, w = %.3f : %g \n", s(1), w(1), tempo)
+fprintf("Tempo medio per 10000 valutazioni\n con s = %.3f, w = %.3f : %g \n\n", s(1), w(1), tempo)
 
 s(2) = -2; %input("Inserisci s: ");
 w(2) = 0.5; %input("Inserisci w: ");
 
 [z2,indx2,tempo] = funzioneES2(x,s(2),w(2));
-fprintf("Tempo medio per 10000 valutazioni con s = %.3f, w = %.3f : %g \n", s(2), w(2), tempo)
+fprintf("Tempo medio per 10000 valutazioni\n con s = %.3f, w = %.3f : %g \n\n", s(2), w(2), tempo)
 
-ph = semilogy(x(indx1),z1,"b-",x(indx2),z2,"r-")
+ph = semilogy(x(indx1),z1,"b-",x(indx2),z2,"r-");
 th = title ("Valori delle funzioni \phi_{s,w}(x)") ;
 xh = xlabel ("Ascisse") ; 
 yh = ylabel ("Valori di \phi_{s,w}(x)") ;
