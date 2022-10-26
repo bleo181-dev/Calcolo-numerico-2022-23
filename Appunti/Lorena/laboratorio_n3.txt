@@ -1,0 +1,22 @@
+appunti calcolo laboratorio n3 
+
+si posso creare struct contenenti campi formati da ulteriori struct && array di struct;
+
+cell array -> struttura dati + generale di matlab;
+		meta dato -> array che può contenere + tipi di dato;
+		alloca lo spazio per i puntatori essendo che non sa che tipo ti dato dovrà contenere;
+		uso parentesi tonde con indici -> restituisce il tipo di dato in quella posizione
+		uso parentesi graffe -> accedo al contenuto
+		esempio -> per accedere al terzo elemento della stringa nella posizione 1,1: A{1,1}(3)
+
+per modificare una proprietà del grafico (es. spessore linea) -> NO tramite click sull'interfaccia, ma
+		si usano metodi set e get; oppure nella funzione plot accodando i vari paramentri;
+		es. set(ph, 'LineWidth', 2); 
+funzione gca -> getcurrentacces = restituisce il function handler degli assi correnti;
+
+reminder-> l'operatore ":" se usato a sè, vede qualunque array come un vettore colonna, ordinati secondo la ram;
+
+
+
+
+

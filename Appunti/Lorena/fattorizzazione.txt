@@ -1,0 +1,45 @@
+su matlab non usare funzione inv! 
+metodi diretti -> fattorizzazione matrice = scrivere matrice come prodotto di altre matrici che hanno forme convenienti per i sistemi
+metodi iterativi -> scrivono una matrice come somma di altre matrici. Partendo da una stima inziziale della soluzione 
+			  costruiamo una successione di vettori = limite successione
+
+condizione matrice = condizione problema, come quest'ultimo è posto
+
+diag (in matlab) -> funzione polimorfica: se riceve matrice ne restituisce diagonale || se riceve in input un vettore restituisce una matrice
+	 con gli elementi del vettore sulla diagonale
+
+soluzione sistemi triangolare sup -> alg. sost. all'indietro
+	    + efficace su matlab fare la soluzione di sostituzione per colonne
+
+soluzione sistemi triangolare inf -> alg. eliminazione in avanti
+
+costo per tutti e due gli algoritmi: O(n^2/2)
+
+
+flops = floating point operation 
+
+analisi all'indietro -> stimiamo l'errore attraverso delle perturbazioni, ovvero per capire quanti ci siamo allontanati dal risultato 
+				corretto dato dall'artitmetica esatta, la riguardiamo come la soluzione di un problema perturbato rispetto a 
+				quello di partenza. La perturbazione tiene conto degli errori che io ho a causa dell'aritmetica finita.
+
+significato formula -> l'errore potenziale è una stima, un upperbound non so se sarà effettivamente così. Il massimo che può succedere è che 
+				la perturbazione è questa funzione dei miei dati (funzione in fondo alla pag. 198). 
+				u = precisione di macchina -> tengo conto dell'aritmetica finita (u mi dice quale valore viene sentito diverso da 1 
+				sommato a 1); 
+				moltiplico poi per il massimo modulo dei miei dati (max Rij) -> tengo conto dell'ordine di grandezza dei dati; 
+				il tutto viene moltiplicato per n(n+1)/2 -> l'ordine di grandezza delle operazioni (n^2/2 quando diventa grande);
+				Quanto più sono grandi i modulo nella matrice di partensza, tanto più verranno amplificati gli errori, di una quantità
+				proporzionale al quadrato della dim. della matrice
+
+Vantaggio fattorizzazione QR rispetto a LR -> quando ho le matrici Q e R risolvere i due sistemi diventa estremamente semplice perchè il 
+				primo diventa solo il prodotto di matrice per vettore (Q trasposto per b, il secondo è un triangolare superiore ->
+				risoluzione all'indietro) 
+
+premoltiplicare per una matrice diagonale -> significa scalare le righe della matrice
+postmoltiplicare " " -> significa scalare le colonne della matrice
+
+Estrarre diagonale da matr. triangolare sup. -> divido ogni riga per il corrispettivo elemento della diagonale
+Estrarre diagonale da matr. triangolare ing. -> divido ogni colonna per il corrispettivo elemento della diagonale
+
+trasformazione elementare di Gauss -> serve per trasformare un vettore che ha un certo numero di componenti != da 0 dopo quella diagonale 
+						in un vettore tutto nullo dalla diagonale in poi
